@@ -72,3 +72,4 @@ form .btn{width:100%;margin-top:22px}
 .main-nav.open{display:block}.main-nav ul{flex-direction:column;align-items:flex-start}
 .story .section,.split{grid-template-columns:1fr}.btn-ghost{margin:10px 0 0}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+[hidden]{display:none!important}
