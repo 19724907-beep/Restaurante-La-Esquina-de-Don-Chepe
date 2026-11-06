@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Menú | La Esquina de Don Chepe - Parrilla y cocina de autor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="main-header"><div class="header-container">
+<div class="logo"><a href="index.html"><h1>La Esquina <span>de Don Chepe</span></h1></a></div>
+<button class="burger" aria-label="Abrir menú">☰</button>
+<nav class="main-nav"><ul>
+<li><a href="index.html" class="nav-link">Inicio</a></li>
+<li><a href="menu.html" class="nav-link active">Menú</a></li>
+<li><a href="reservas.html" class="nav-link">Reservas</a></li>
+<li><a href="contacto.html" class="nav-link">Contacto</a></li>
+<li><button class="cart-btn" id="cart-open">Pedido<b id="cart-count">0</b></button></li>
+<li><a href="login.html" class="btn-login-nav">Iniciar sesión</a></li>
+</ul></nav></div></header>
+<div class="page-head"><h2>Nuestro menú</h2><p>Agrega platos a tu pedido y confírmalo (simulado).</p></div>
+<main class="section"><div class="filters">
+<button class="on" data-f="todos">Todos</button><button data-f="parrilla">Parrilla</button><button data-f="pizzas">Pizzas</button><button data-f="bowls">Bowls</button><button data-f="postres">Postres</button></div>
+<div class="menu-grid">
+<article class="menu-card" data-c="parrilla"><div class="card-img"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=70" alt="Costillas BBQ Especiales" loading="lazy"></div><div class="card-info"><h3>Costillas BBQ Especiales</h3><p>Cerdo ahumado lentamente con salsa secreta.</p><div class="card-footer"><span class="price">$18.50</span><button class="add" data-n="Costillas BBQ Especiales" data-p="18.50">Agregar</button></div></div></article>
+<article class="menu-card" data-c="parrilla"><div class="card-img"><img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=800&q=70" alt="Churrasco a la Brasa" loading="lazy"></div><div class="card-info"><h3>Churrasco a la Brasa</h3><p>Corte de res de 300 g con chimichurri y papas rústicas.</p><div class="card-footer"><span class="price">$21.00</span><button class="add" data-n="Churrasco a la Brasa" data-p="21.00">Agregar</button></div></div></article>
+<article class="menu-card" data-c="parrilla"><div class="card-img"><img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?auto=format&fit=crop&w=800&q=70" alt="Pollo al Carbón" loading="lazy"></div><div class="card-info"><h3>Pollo al Carbón</h3><p>Medio pollo marinado en cítricos, con ensalada fresca.</p><div class="card-footer"><span class="price">$13.50</span><button class="add" data-n="Pollo al Carbón" data-p="13.50">Agregar</button></div></div></article>
+<article class="menu-card" data-c="parrilla"><div class="card-img"><img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=70" alt="Brochetas Mixtas" loading="lazy"></div><div class="card-info"><h3>Brochetas Mixtas</h3><p>Res, pollo y vegetales asados al fuego.</p><div class="card-footer"><span class="price">$15.00</span><button class="add" data-n="Brochetas Mixtas" data-p="15.00">Agregar</button></div></div></article>
+<article class="menu-card" data-c="pizzas"><div class="card-img"><img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=70" alt="Pizza de Higo y Jamón" loading="lazy"></div><div class="card-info"><h3>Pizza de Higo y Jamón</h3><p>Masa madre, mozzarella, higos caramelizados y jamón serrano.</p><div class="card-footer"><span class="price">$14.00</span><button class="add" data-n="Pizza de Higo y Jamón" data-p="14.00">Agregar</button></div></div></article>
+<article class="menu-card" data-c="bowls"><div class="card-img"><img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=70" alt="Bowl de Salmón y Aguacate" loading="lazy"></div><div class="card-info"><h3>Bowl de Salmón y Aguacate</h3><p>Salmón curado, quinoa, aguacate y aderezo de sésamo.</p><div class="card-footer"><span class="price">$12.50</span><button class="add" data-n="Bowl de Salmón y Aguacate" data-p="12.50">Agregar</button></div></div></article>
+<article class="menu-card" data-c="postres"><div class="card-img"><img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=800&q=70" alt="Brownie con Helado" loading="lazy"></div><div class="card-info"><h3>Brownie con Helado</h3><p>Brownie tibio de chocolate con helado de vainilla.</p><div class="card-footer"><span class="price">$6.50</span><button class="add" data-n="Brownie con Helado" data-p="6.50">Agregar</button></div></div></article>
+</div></main>
+<aside class="drawer" id="drawer" aria-label="Tu pedido">
+<h3>Tu pedido</h3><ul id="cart-items"></ul>
+<div class="cart-total"><span>Total</span><span id="cart-total">$0.00</span></div>
+<button class="btn" id="checkout">Confirmar pedido</button>
+<button class="btn-ghost" id="cart-close" style="color:var(--verde);border-color:#ccc;margin:10px 0 0">Seguir viendo el menú</button>
+</aside>
+<div class="toast" id="toast" role="status"></div>
+<footer class="main-footer"><p>&copy; 2026 La Esquina de Don Chepe - Parrilla y cocina de autor. Diseño para fines educativos. Todo el contenido es simulado.</p></footer>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reservas | La Esquina de Don Chepe - Parrilla y cocina de autor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="main-header"><div class="header-container">
+<div class="logo"><a href="index.html"><h1>La Esquina <span>de Don Chepe</span></h1></a></div>
+<button class="burger" aria-label="Abrir menú">☰</button>
+<nav class="main-nav"><ul>
+<li><a href="index.html" class="nav-link">Inicio</a></li>
+<li><a href="menu.html" class="nav-link">Menú</a></li>
+<li><a href="reservas.html" class="nav-link active">Reservas</a></li>
+<li><a href="contacto.html" class="nav-link">Contacto</a></li>
+<li><button class="cart-btn" id="cart-open">Pedido<b id="cart-count">0</b></button></li>
+<li><a href="login.html" class="btn-login-nav">Iniciar sesión</a></li>
+</ul></nav></div></header>
+<div class="page-head"><h2>Reserva tu mesa</h2><p>Confirmación inmediata. Reserva simulada.</p></div>
+<main class="section"><div class="form-wrap"><form id="form-reserva">
+<label for="nombre">Nombre</label><input id="nombre" name="nombre" required>
+<label for="correo">Correo</label><input id="correo" name="correo" type="email" required>
+<div class="row2"><div><label for="fecha">Fecha</label><input id="fecha" name="fecha" type="date" required></div>
+<div><label for="hora">Hora</label><select id="hora" name="hora"><option>12:00</option><option>13:00</option><option>14:00</option><option>19:00</option><option>20:00</option><option>21:00</option></select></div></div>
+<label for="personas">Personas</label><select id="personas" name="personas"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>8</option></select>
+<button class="btn" type="submit">Confirmar reserva</button><div class="msg" role="status"></div></form></div></main>
+<aside class="drawer" id="drawer" aria-label="Tu pedido">
+<h3>Tu pedido</h3><ul id="cart-items"></ul>
+<div class="cart-total"><span>Total</span><span id="cart-total">$0.00</span></div>
+<button class="btn" id="checkout">Confirmar pedido</button>
+<button class="btn-ghost" id="cart-close" style="color:var(--verde);border-color:#ccc;margin:10px 0 0">Seguir viendo el menú</button>
+</aside>
+<div class="toast" id="toast" role="status"></div>
+<footer class="main-footer"><p>&copy; 2026 La Esquina de Don Chepe - Parrilla y cocina de autor. Diseño para fines educativos. Todo el contenido es simulado.</p></footer>
+<script src="js/main.js"></script>
+</body>
+</html>
